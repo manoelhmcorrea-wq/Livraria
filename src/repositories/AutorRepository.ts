@@ -9,7 +9,11 @@ export class AutorRepository {
             autor.nacionalidade
         ];
         const result = await pool.query(query, values);
-        return new Autor(result.rows[0].nome, result.rows[0].nacionalidade, result.rows[0].id);
+        return new Autor(
+            result.rows[0].nome, 
+            result.rows[0].nacionalidade, 
+            result.rows[0].id
+        );
     }
 
     async buscarPorNome(nome: string): Promise<Autor | null> {

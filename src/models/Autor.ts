@@ -1,4 +1,3 @@
-//adicionado id opcional para permitir a criação de novos autores sem precisar passar o id, que será gerado pelo banco de dados
 export interface IAutor {
     nome: string;
     nacionalidade: string;  
