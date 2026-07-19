@@ -98,4 +98,10 @@ export class LivroRepository {
         const values = [id];
         await pool.query(query, values);
     }
+
+    async atualizarDisponibilidade(id:number, disponivel:boolean): Promise<void>{
+        const query= `UPDATE livros SET disponivel = $1 WHERE id = $2`;
+        const values = [disponivel,id]
+        await pool.query(query,values)
+    }
 }

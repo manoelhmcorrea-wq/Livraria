@@ -2,6 +2,7 @@ import {pool} from '../database/connection';
 import { Cliente } from '../models/Cliente';
 
 export class ClienteRepository {
+    
     async criar(cliente: Cliente): Promise<Cliente> {
         const query = 'INSERT INTO clientes (nome, email, cpf, telefone, ativo) VALUES ($1, $2, $3, $4, $5) RETURNING *';
         const values = [
