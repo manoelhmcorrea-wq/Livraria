@@ -2,6 +2,7 @@ import {AutorMenu} from "./AutorMenu";
 import {LivroMenu} from "./LivroMenu";
 import { ClienteMenu } from "./ClienteMenu";
 import { EmprestimoMenu } from "./EmprestimoMenu";
+import { RelatorioMenu } from "./RelatorioMenu";
 import {perguntar} from "../utils/input";
 
 export class MainMenu {
@@ -9,12 +10,14 @@ export class MainMenu {
     private livroMenu: LivroMenu;
     private clienteMenu: ClienteMenu;
     private emprestimoMenu: EmprestimoMenu;
+    private relatorioMenu: RelatorioMenu;
 
     constructor() {
         this.autorMenu = new AutorMenu();
         this.livroMenu = new LivroMenu();
         this.clienteMenu = new ClienteMenu();
         this.emprestimoMenu = new EmprestimoMenu;
+        this.relatorioMenu = new RelatorioMenu;
     }
 
     async iniciar(): Promise<void> {
@@ -23,7 +26,8 @@ export class MainMenu {
             console.log('1. Gerenciar Autores');
             console.log('2. Gerenciar Livros');
             console.log('3. Gerenciar Clientes');
-            console.log('4. Gerenciar Emprestimos')
+            console.log('4. Gerenciar Emprestimos');
+            console.log('5.Relatórios')
             console.log('0. Sair');
             const opcao = await perguntar('Escolha uma opção: ');
 
@@ -38,7 +42,11 @@ export class MainMenu {
                     await this.clienteMenu.iniciar(); 
                     break;
                 case '4':
-                    await this.emprestimoMenu.iniciar()
+                    await this.emprestimoMenu.iniciar();
+                    break;
+                case '5':
+                    await this.relatorioMenu.iniciar();
+                    break
                 case '0':
                     console.log('Saindo...');
                     return;
