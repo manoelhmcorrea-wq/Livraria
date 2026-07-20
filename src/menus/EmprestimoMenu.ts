@@ -16,7 +16,7 @@ export class EmprestimoMenu{
             console.log('2. Registrar devolução');
             console.log('3. Listar empréstimo');
             console.log('4. Buscar empréstimo por ID');
-            console.log('0. Sair');
+            console.log('0. Voltar ao menu principal');
 
             const opcao = await perguntar('Escolha uma opção: ');
 

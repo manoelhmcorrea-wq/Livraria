@@ -20,7 +20,7 @@ export class RelatorioMenu {
             console.log('3. Livros emprestados');
             console.log('4. Quantidade de empréstimo por livro')
             console.log('5. Clientes com empréstimos ativos')
-            console.log('0. Voltar');
+            console.log('0. Voltar ao menu principal');
 
             const opcao = await perguntar('Escolha uma opção: ');
 

@@ -17,7 +17,7 @@ export class ClienteMenu{
             console.log('3. Buscar Cliente por ID');
             console.log('4. Atualizar Cliente');
             console.log('5. Remover Cliente');
-            console.log('0. Sair');
+            console.log('0. Voltar ao menu principal');
 
             const opcao = await perguntar('Escolha uma opção: ');
 

@@ -27,7 +27,7 @@ export class MainMenu {
             console.log('2. Gerenciar Livros');
             console.log('3. Gerenciar Clientes');
             console.log('4. Gerenciar Emprestimos');
-            console.log('5.Relatórios')
+            console.log('5. Relatórios')
             console.log('0. Sair');
             const opcao = await perguntar('Escolha uma opção: ');
 

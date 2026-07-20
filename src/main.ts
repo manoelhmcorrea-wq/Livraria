@@ -1,18 +1,20 @@
-import { pool } from './database/connection';
-import { MainMenu } from './menus/MainMenu';
+import { pool } from "./database/connection";
+import { MainMenu } from "./menus/MainMenu";
 
-//TESTE DE CONEXÃO COM O BANCO DE DADOS
-
-/*async function main() {
-  const result = await pool.query('SELECT NOW()');
-  console.log(result.rows[0]);
-}*/
 async function main() {
-  const mainMenu = new MainMenu();
-  await mainMenu.iniciar();
+    try {
+        await pool.query("SELECT 1");
+        console.log("Banco de dados conectado com sucesso.");
+
+        const mainMenu = new MainMenu();
+        await mainMenu.iniciar();
+
+    } finally {
+        await pool.end();
+    }
 }
+
 main().catch((error) => {
-  console.error('Erro ao iniciar o programa:', error);
-  process.exit(1);
+    console.error("Erro ao iniciar o programa:", error);
+    process.exit(1);
 });
-main();

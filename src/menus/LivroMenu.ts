@@ -17,7 +17,7 @@ export class LivroMenu {
             console.log('3. Buscar Livro por ID');
             console.log('4. Atualizar Livro');
             console.log('5. Remover Livro');
-            console.log('0. Sair');
+            console.log('0. Voltar ao menu principal');
 
             const opcao = await perguntar('Escolha uma opção: ');
 
