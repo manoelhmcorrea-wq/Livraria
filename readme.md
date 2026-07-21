@@ -73,7 +73,9 @@ npm run dev
 
 
 ---
+## Estrutura do Projeto
 
+```text
 Livraria/
 
 ├── src/
@@ -133,7 +135,7 @@ Livraria/
 ├── tsconfig.json
 ├── .env
 └── README.md
-
+```
 ---
 
 ## Funcionalidades
